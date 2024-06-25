@@ -24,7 +24,7 @@ def creating_dictionary():
     """
     my_dict = dict()
     print(my_dict)
-    my_dict2 = {}
+    my_dict2 = {}  #
     print(my_dict2)
     eng_span = dict(one='uno', two='dos', three='tres')
     print(eng_span)
