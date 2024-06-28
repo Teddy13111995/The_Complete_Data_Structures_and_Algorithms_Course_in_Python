@@ -35,5 +35,62 @@ def creating_dictionary():
     print(my_dict3)
 
 
+def dictionary_in_memory():
+    """
+    Dictionaries are indexed by keys and can be seen as associative arrays. Python dictionary are implemented using hash tables.
+    It's an array whose indexes are obtained using a hash function on the keys.
+    A hash table is a way of doing key-value lookups. You store the values in an array and then use a hash function
+    to find the index of the array cell that corresponds to your key-value pair.
+
+    :return:
+    """
+    pass
+
+
+def insert_update_dictionary():
+    """
+    Dictionaries are mutable. We can add items or change the value of the existing items using assignment operator.
+    If the key is already present, the value gets updated. Otherwise, a new key-value pair is added to the dictionary.
+    TC = O(1) SC=O(1) (amortized for adding key-value pair)
+    :return:
+    """
+    my_dict = {'name': 'Edy', 'age': 26}
+    my_dict['age'] = 27
+    my_dict['sex'] = 'male'
+    print(my_dict)
+
+
+def traversing_dictionary(dict):
+    """
+    Using a dictionary in the for statement, it traverses the keys of dictionary. TC = O(n) SC=O(1)
+    """
+    for key in dict:
+        print(key, dict[key])
+
+
+def search_dictionary(dict, value):
+    """
+    Searching can be done by using linear search on a dictionary. TC =O(n) SC = O(1)
+    """
+    for key in dict:
+        if dict[key] == value:
+            return key, value
+    return 'value does not exist'
+
+
+def delete_dictionary():
+    """
+    using del dict[key] TC = O(1) SC = O(1)
+    using pop - dict.pop(key,default_value) TC = O(1) SC = O(1)
+    using popitem - removes and returns the last inserted key-value in the dictionary - dict.popitem() TC=O(1) SC=O(1)
+    using clear - removes all the key-value pairs in the dictionary dict.clear() TC = O(n)
+    """
+
+    pass
+
+
 if __name__ == "__main__":
-    creating_dictionary()
+    # creating_dictionary()
+    insert_update_dictionary()
+    my_dict = {'name': 'Edy', 'age': 27, 'sex': 'male'}
+    traversing_dictionary(my_dict)
