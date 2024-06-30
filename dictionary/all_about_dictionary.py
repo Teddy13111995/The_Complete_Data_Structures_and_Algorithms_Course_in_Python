@@ -89,6 +89,75 @@ def delete_dictionary():
     pass
 
 
+def dictionary_methods():
+    """
+    dict.clear() - delete all elements of dictionary, returns None
+    dict.copy() - creates a copy of the dictionary, doesn't modify original one.
+    dictionary.fromkeys(sequence[],value(default = None)) - creates a new dictionary from given sequence of elements with value provided by the user.
+    dictionary.get(key,value(optional)) - returns value for specified key if the key is in the dictionary.
+    dictionary.items() - a view object that displays a list of dictionaries, key-value tuple pairs.
+    dictionary.keys() - returns a view object that returns the list of all keys in the dictionary.
+    dictionary.popitem() - returns an arbitrary(last) element pair from the dictionary and removes that arbitrary element.
+    dictionary.setdefault(key,default_value) - returns the value of the key if the key is in the dictionary, if not it inserts key with a value to the dictionary.
+    dictionary.pop(key,default_value(when key is not in the dictionary)) - remove the key if key is in dictionary else returns default_value.
+    dictionary.values() - returns a view object of the list of values present in the dictionary.
+    dictionary.update(other_dictionary) - updates the dictionary with the elements from another dictionary object or from iterables of key-value pair.
+                            If the key is in the dictionary, then it updates the value with new value.
+    """
+    pass
+
+
+def dictionary_operations():
+    """
+    in/not in - check if key is in dictionary or value in dictionary.values().
+    len() - count number of pairs in the dictionary.
+    all() - checks if all keys are Ture(non-zeros) or False(0)
+    any() - 1. if all values are tue - True 2. All values are False - False 3. If one value is True - True
+    sorted() - return list of sorted keys.
+    """
+    pass
+
+
+def dictionary_vs_list():
+    """
+    Dictionary                              List
+    Unordered/ordered as of python 3.7      Ordered
+    Access via keys                         Access via index
+    Collection of key-value pair            Collection of elements
+    Preferred when you have unique keys     Preferred when you have ordered data
+    No duplicate members                    Allow duplicate members
+    """
+    pass
+
+
+def dictionary_comprehension():
+    """
+    new_dict = {new_key:new_value for item in list}
+    new_dict = {new_key:new_value for (key,value) in dict.items() if condition}
+
+    def count_word_frequency(words):
+        word_count = {}
+        for word in words:
+            word_count[word] = word_count.get(word, 0) + 1
+        return word_count
+
+    def merge_dicts(dict1, dict2):
+        result = dict1.copy()
+        for key, value in dict2.items():
+            result[key] = result.get(key, 0) + value
+        return result
+
+    def max_value_key(my_dict):
+        return max(my_dict, key=my_dict.get)
+
+    def reverse_dict(my_dict):
+        return {v: k for k, v in my_dict.items()}
+
+
+    """
+    pass
+
+
 if __name__ == "__main__":
     # creating_dictionary()
     insert_update_dictionary()
